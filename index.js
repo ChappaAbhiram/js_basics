@@ -17,7 +17,27 @@ items[2].style.backgroundColor = 'green';
 for(var i=0;i<items.length;i++){
 items[i].style.fontWeight = 'bold';
 }
-var li = document.getElementsByTagName('li');
-li[4].style.color = 'red';
-var it = document.getElementsByClassName('list-group-item-1');
-it[0].style.fontWeight = 'bold';
+//var li = document.getElementsByTagName('li');
+//li[4].style.color = 'red';
+//var it = document.getElementsByClassName('list-group-item-1');
+//it[0].style.fontWeight = 'bold';
+var header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid 4px black';
+var input = document.querySelector('input');
+input.value = 'HelloWorld';
+var submit = document.querySelector('input[type="submit"]');
+submit.value = 'SEND';
+var item = document.querySelector('.list-group-item');
+item.style.color = 'red';
+var lastItem = document.querySelector('.list-group-item:last-child');
+lastItem.style.color = 'blue';
+var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundColor = 'green';
+//var odd = document.querySelectorAll('li:nth-child(odd)');
+//var even = document.querySelectorAll('li:nth-child(even)');
+//for(var i=0;i<odd.length;i++){
+  //  odd[i].style.backgroundColor = 'gray';
+  //  even[i].style.backgroundColor = 'white';
+//}
+var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.visibility = 'hidden';
