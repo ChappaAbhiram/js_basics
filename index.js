@@ -17,3 +17,7 @@ items[2].style.backgroundColor = 'green';
 for(var i=0;i<items.length;i++){
 items[i].style.fontWeight = 'bold';
 }
+var li = document.getElementsByTagName('li');
+li[4].style.color = 'red';
+var it = document.getElementsByClassName('list-group-item-1');
+it[0].style.fontWeight = 'bold';
