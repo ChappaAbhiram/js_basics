@@ -134,13 +134,14 @@ function addItem(e){
 
   // Get input value
   var newItem = document.getElementById('item').value;
+  var description = document.getElementById('description').value;
 
   // Create new li element
   var li = document.createElement('li');
   // Add class
   li.className = 'list-group-item';
   // Add text node with input value
-  li.appendChild(document.createTextNode(newItem));
+  li.appendChild(document.createTextNode(newItem+' '+description));
 
   // Create del button element
   var deleteBtn = document.createElement('button');
@@ -170,6 +171,29 @@ function removeItem(e){
       itemList.removeChild(li);
     }
   }
+}
+function filterItems(e){
+   //converting to lower case
+   var text = e.target.value.toLowerCase();
+ var items = itemList.getElementsByTagName('li');
+ //converting to array
+//  Array.from(items).forEach(function(item){
+//     var itemName = item.firstChild.textContent;
+//     if(itemName.toLowerCase().indexOf(text) != -1){
+//       item.style.display = 'block';
+//     } else {
+//       item.style.display = 'none';
+//     }
+//   });
+  for(var i=0;i<items.length;i++){
+    var itemName = items[i].textContent;
+    if(itemName.toLowerCase().indexOf(text) != -1){
+        items[i].style.display = 'block';
+    }
+     else{
+         items[i].style.display = 'none';
+     }
+  };
 }
 
 
